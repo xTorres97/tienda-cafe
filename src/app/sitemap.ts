@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import type { MetadataRoute } from "next";
 import { getDb } from "@/db";
 import { listProducts } from "@/server/catalog";
@@ -5,7 +6,7 @@ import { listProducts } from "@/server/catalog";
 export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const base = SITE_URL;
   const products = await listProducts(await getDb());
   return [
     { url: `${base}/`, changeFrequency: "weekly", priority: 1 },

@@ -2,7 +2,7 @@
 
 **[Español](#español) · [English](#english)**
 
-> 🔗 **Demo:** _(pendiente)_ · Panel: `/admin` con el botón de cuenta de demostración · Pagos simulados, sin dinero real / Simulated payments, no real money.
+> 🔗 **Demo:** [sombradebucare.vercel.app](https://sombradebucare.vercel.app) · Panel: `/admin` con el botón de cuenta de demostración · Pagos simulados, sin dinero real / Simulated payments, no real money.
 
 ![Inicio](docs/screenshots/inicio.webp)
 
