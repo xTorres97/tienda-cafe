@@ -27,7 +27,7 @@ export default async function AdminOrders({ searchParams }: { searchParams: Prom
   const [stats, orders] = await Promise.all([dashboardStats(db), listOrders(db, { status })]);
 
   const cards = [
-    { label: "Ventas confirmadas", value: formatUSD(stats.revenue), hint: `${stats.paidCount} pedidos` },
+    { label: "Ventas confirmadas", value: formatUSD(stats.revenue), hint: `${stats.paidCount} ${stats.paidCount === 1 ? "pedido" : "pedidos"}` },
     { label: "Por preparar", value: stats.toPrepare, hint: "Pagados sin despachar" },
     { label: "Esperando pago", value: stats.pending, hint: "Con stock reservado" },
     { label: "Stock bajo", value: stats.lowStock, hint: "Variantes con 3 o menos", href: "/admin/productos" },

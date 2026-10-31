@@ -86,7 +86,7 @@ export default async function OrderPage({ params }: { params: Promise<{ id: stri
           {payment?.cardLast4 && paidLike && (
             <div>
               <p className="font-semibold">Pago</p>
-              <p className="mt-1 capitalize text-muted">{payment.cardBrand} terminada en {payment.cardLast4}</p>
+              <p className="mt-1 text-muted">{payment.cardBrand ? payment.cardBrand[0].toUpperCase() + payment.cardBrand.slice(1) : "Tarjeta"} terminada en {payment.cardLast4}</p>
             </div>
           )}
         </div>
